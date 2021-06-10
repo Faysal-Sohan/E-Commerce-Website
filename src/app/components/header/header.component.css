@@ -1,0 +1,55 @@
+.grid-header{
+    display: grid;
+    grid-template-areas: 
+    "header1"
+    "header2"
+    "header3";
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5rem 8rem 3.5rem;
+    height: 100%;
+}
+
+.grid-header .header1 {
+    grid-area: header1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20rem;
+    padding-left: 20rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.grid-header .header2 {
+    grid-area: header2;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20rem;
+    padding-left: 20rem;
+}
+.grid-header .header2 .brand img{
+    max-height: 8rem;
+    max-width: 10rem;
+}
+.grid-header .header3 {
+    grid-area: header3;
+    background: #192037;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20rem;
+    padding-left: 20rem;
+}
+
+.header3 a{
+    color: white;
+    align-items: center;
+}
+
+#categories {
+    font-size: 3rem;
+    background: #EE4343;
+}

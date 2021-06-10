@@ -1,0 +1,30 @@
+.slider {
+    grid-area: slider;
+}
+.grid-slider {
+    display: grid;
+    grid-template-areas: 
+    "drop-box"
+    "slide";
+    grid-template-columns: 46rem 1fr;
+    height: 100%;
+}
+.grid-slider .content-table {
+    grid-area: drop-box;
+    display: block;
+    block-size: 1rem;
+    padding-left: 20rem ;
+}
+
+.data {
+    display: table;
+    margin-top: 10px;
+    block-size: 3rem;
+    width: 25rem;
+    align-items: center;
+    border-bottom: 1px solid #EAE4E4;
+}
+app-image-slider{
+    padding-top: 1rem;
+    padding-right: 20rem;
+}
