@@ -15,3 +15,6 @@ app-header {
 app-slider {
     grid-area: slider;
 }
+.product-area{
+    grid-area: product-list;
+}

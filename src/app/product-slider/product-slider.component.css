@@ -1,0 +1,13 @@
+
+.product-slider{
+    max-width: 1480px ;
+    margin-left: 20rem;
+}
+
+owl-carousel-o {
+    justify-content: space-around;
+}
+img {
+    max-width: 400px;
+    max-height: 3000px;
+}

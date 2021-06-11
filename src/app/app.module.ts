@@ -7,21 +7,24 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SliderComponent } from './components/slider/slider.component';
 import { ImageSliderComponent } from './components/slider/image-slider/image-slider.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ProductSliderComponent } from './product-slider/product-slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SliderComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    ProductSliderComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     MatCarouselModule.forRoot(),
     BrowserModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
