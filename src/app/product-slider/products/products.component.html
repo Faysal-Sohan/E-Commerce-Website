@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="col-md-1">
+            <span class="list-group-item clearfix">
+                <img src="../../../assets/images/product-brands-mobile/samsung.jpg" alt="Samsung" class="img-responsive" style="max-width: 70px;">
+            </span> 
+        </div>
+        <div class="col-md-2">
+            <h4>SAMSUNG</h4>
+            <p>products found in Samsung</p>
+        </div>
+    </div>
+</div>
+<hr>
+<h3>All Products</h3>
+<div class="row">
+    <div class="col-md-2" *ngFor = "let product of products">
+        <a href="#" class="list-group-item clearfix">
+            <span class="inner">
+                <img [src]= "product.imagePath"
+                alt="{{product.name}}" class="img-responsive" style="max-width: 200px;">
+            </span>
+            <h4 class="pull-down">{{product.name}}</h4>
+            <p class= "pull-down">Price: {{product.price}}TK</p>
+        </a>
+    </div>
+</div>    
+<div class="row">
+    <app-cart></app-cart>
+</div>

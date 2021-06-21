@@ -9,6 +9,10 @@ import { ImageSliderComponent } from './components/slider/image-slider/image-sli
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ProductSliderComponent } from './product-slider/product-slider.component';
+import { ProductsComponent } from './product-slider/products/products.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ProductSliderComponent } from './product-slider/product-slider.componen
     HeaderComponent,
     SliderComponent,
     ImageSliderComponent,
-    ProductSliderComponent
+    ProductSliderComponent,
+    ProductsComponent,
+    CartItemComponent,
+    CartComponent,
+  
   ],
   imports: [
     BrowserModule,
