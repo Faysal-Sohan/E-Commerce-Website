@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +13,8 @@ import { ProductSliderComponent } from './product-slider/product-slider.componen
 import { ProductsComponent } from './product-slider/products/products.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 
 @NgModule({
@@ -24,6 +27,8 @@ import { CartComponent } from './cart/cart.component';
     ProductsComponent,
     CartItemComponent,
     CartComponent,
+    ProductDetailsComponent,
+    HomepageComponent,
   
   ],
   imports: [

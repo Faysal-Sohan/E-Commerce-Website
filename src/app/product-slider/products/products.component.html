@@ -15,7 +15,7 @@
 <h3>All Products</h3>
 <div class="row">
     <div class="col-md-2" *ngFor = "let product of products">
-        <a href="#" class="list-group-item clearfix">
+        <a routerLink = "/product-details" class="list-group-item clearfix">
             <span class="inner">
                 <img [src]= "product.imagePath"
                 alt="{{product.name}}" class="img-responsive" style="max-width: 200px;">
@@ -23,6 +23,10 @@
             <h4 class="pull-down">{{product.name}}</h4>
             <p class= "pull-down">Price: {{product.price}}TK</p>
         </a>
+        <div class="col-xs-12">
+            <button class="btn btn-success">Buy Now</button>
+            <button class="btn btn-success">Add to Cart</button>
+        </div>
     </div>
 </div>    
 <div class="row">

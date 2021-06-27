@@ -1,0 +1,30 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "slider"
+    "product-list"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 14rem 50rem 1fr 6rem ;
+    height: 100%;
+}
+app-header {
+    grid-area: header;
+}
+app-slider {
+    grid-area: slider;
+}
+.product-area{
+    grid-area: product-list;
+}
+app-products {
+    padding-left: 20rem;
+    padding-right: 20rem;
+    margin-top: 5px;
+}
+app-product-details {
+    padding-left: 20rem;
+    padding-right: 20rem;
+    margin-top: 10px;
+}
