@@ -18,7 +18,7 @@ export class ProductDetailsComponent implements OnInit {
     let name = this.route.snapshot.paramMap.get('id');
     this.productId = name;
     this.products = this.AllProducts.getOneProduct(name!);
-    console.log(this.products)
+    console.log(this.products);
   }
 
 }

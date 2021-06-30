@@ -1,24 +1,19 @@
+import { ProductsService } from './../services/products.service';
 import { Component, OnInit } from '@angular/core';
 
+import { ProductDetails } from '../product-details.model';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems = [
-    { id:1, productId: 1, productName: "Test1", qty: 4, price: 100},
-    { id:1, productId: 3, productName: "Test3", qty: 2, price: 300},
-    { id:1, productId: 4, productName: "Test4", qty: 1, price: 50},
-    { id:1, productId: 2, productName: "Test2", qty: 5, price: 200},
-  ];
+  cartItems: ProductDetails[] = [];
   cartTotal = 0;
-  constructor() { }
+  constructor(private items: ProductsService) { }
 
   ngOnInit(): void {
-    this.cartItems.forEach(item => {
-      this.cartTotal += (item.qty * item.price);
-    })
+    this.cartItems= this.items.getCartItems();
+    console.log(this.cartItems);
   }
-
 }

@@ -1,3 +1,4 @@
+
 import { BrandService } from './../../services/brand.service';
 import { Brand } from './../../brand.model';
 import { ProductDetails } from './../../product-details.model';
@@ -23,7 +24,7 @@ export class ProductsComponent implements OnInit {
     private router: Router, 
     private route: ActivatedRoute,
     private brandDetails: BrandService,
-    private msg: MessengerService) { }
+    private addcart: ProductsService) { }
 
 
   ngOnInit(): void {
@@ -36,8 +37,9 @@ export class ProductsComponent implements OnInit {
   onClick(product: Product){
     this.router.navigate(['/product-details',product.name]);
   }
-  handleAddToCart(product: ProductDetails) {
-    this.msg.sendMsg(product)
+  handleAddToCart(product: Product) {
+    console.log(product)
+    this.addcart.addToCart(product.id)
   }
 
 }

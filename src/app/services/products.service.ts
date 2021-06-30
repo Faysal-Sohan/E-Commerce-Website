@@ -1,5 +1,5 @@
 import { ProductDetails } from './../product-details.model';
-
+import { Product } from '../product-slider/products/product.model';
 import { Injectable } from '@angular/core';
 
 
@@ -13,6 +13,8 @@ export class ProductsService {
     new ProductDetails(1,3,"Samsung Galaxy S20 FE","64,999","../assets/images/products/samsung-galaxy-s20-fe-4g-1.jpg","test3"),
     new ProductDetails(1,4,"Samsung Galaxy S21 Ultra","119,999","../assets/images/products/samsung-galaxy-s21-ultra-5g-1.jpg","test4"),
   ]
+
+  cartItems: ProductDetails[]=[];
 
   products: ProductDetails[] = [];
   constructor() { }
@@ -33,4 +35,15 @@ export class ProductsService {
     }
     return this.productDetails[i];
   }
+  addToCart(id:any){
+    for(let i = 0;i<4;i++){
+      if(id===this.productDetails[i].id){
+        this.cartItems.push(this.productDetails[i]);
+      }
+    }
+  }
+  getCartItems():ProductDetails[]{
+    return this.cartItems;
+  }
 }
+    

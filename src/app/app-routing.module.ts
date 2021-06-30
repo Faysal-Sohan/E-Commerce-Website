@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'default', component: HomepageComponent },
   { path: '', component: HomepageComponent },
   { path:'product-list/:brandId', component: ProductsComponent },  
   { path: 'product-details/:id', component: ProductDetailsComponent },
+  { path:'cart', component: CartComponent }
 ]
 
 @NgModule({
