@@ -15,6 +15,9 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import {Component} from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 @NgModule({
@@ -29,6 +32,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     CartComponent,
     ProductDetailsComponent,
     HomepageComponent,
+    CheckoutComponent,
   
   ],
   imports: [
@@ -37,9 +41,10 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     MatCarouselModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

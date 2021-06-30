@@ -4,7 +4,6 @@
 .grid-slider .content-table {
     display: block;
     block-size: 1rem;
-    padding-left: 20rem ;
 }
 
 .data {
@@ -16,5 +15,5 @@
     border-bottom: 1px solid #EAE4E4;
 }
 .grid-slider .image-slider{
-    padding-left: 47rem;
+    padding-left: 27rem;
 } 

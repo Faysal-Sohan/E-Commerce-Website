@@ -1,11 +1,13 @@
 export class ProductDetails {
-    id!: number;
+    barndId: any;
+    id: any;
     name!: string;
     price!: string;
     imagePath!: string;
     details!: string;
 
-    constructor(id:number,name: string, price:string, imagePath:string, details: string){
+    constructor(brandId:any,id:any,name: string, price:string, imagePath:string, details: string){
+        this.barndId = brandId;
         this.id = id;
         this.name = name;
         this.price = price;
