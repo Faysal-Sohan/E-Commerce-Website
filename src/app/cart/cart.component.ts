@@ -15,13 +15,13 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems = this.items.getCartItems();
-
     this.cartDisplay();
-    console.log(this.cartProducts);
+    this.totalPrice();
   }
 
   cartDisplay() {
     let productExists = false;
+    let qtyAdded = false;
     for (let i in this.cartItems) {
       if (!productExists) {
         this.cartProducts.push({
@@ -33,26 +33,30 @@ export class CartComponent implements OnInit {
         productExists = true;
       }
       else {
+        qtyAdded = false;
         for (let j in this.cartProducts) {
           if (this.cartItems[i].id === this.cartProducts[j].productId) {
             this.cartProducts[j].qty++;
+            qtyAdded = true;
             break;
           }
-          else {
-            this.cartProducts.push({
-              productId: this.cartItems[i].id,
-              productName: this.cartItems[i].name,
-              qty: 1,
-              price: this.cartItems[i].price,
-            })
-            break;
-          }
-
+        }
+        if (!qtyAdded) {
+          this.cartProducts.push({
+            productId: this.cartItems[i].id,
+            productName: this.cartItems[i].name,
+            qty: 1,
+            price: this.cartItems[i].price,
+          })
         }
       }
-
-
-
     }
   }
+
+  totalPrice() {
+    for (let i in this.cartProducts) {
+      this.cartTotal += this.cartProducts[i].price * this.cartProducts[i].qty;
+    }
+  }
+
 }
