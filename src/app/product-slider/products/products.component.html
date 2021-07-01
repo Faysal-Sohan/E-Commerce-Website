@@ -3,7 +3,7 @@
         <div class="col-md-1">
             <span class="list-group-item clearfix">
                 <img [src]="brand.brandImage" [alt]="brand.brandName" class="img-responsive" style="max-width: 70px;">
-            </span> 
+            </span>
         </div>
         <div class="col-md-2">
             <h4>{{brand.brandName}}</h4>
@@ -14,21 +14,17 @@
 <hr>
 <h3>All Products</h3>
 <div class="row">
-    <div class="col-md-2" *ngFor = "let product of products">
+    <div class="col-md-2" *ngFor="let product of products">
         <a (click)="onClick(product)" class="list-group-item clearfix">
             <span class="inner">
-                <img [src]= "product.imagePath"
-                alt="{{product.name}}" class="img-responsive" style="max-width: 200px;">
+                <img [src]="product.imagePath" alt="{{product.name}}" class="img-responsive" style="max-width: 200px;">
             </span>
             <h4 class="pull-down">{{product.name}}</h4>
-            <p class= "pull-down">Price: {{product.price}}TK</p>
+            <p class="pull-down">Price: {{product.price}}TK</p>
         </a>
         <div class="col-xs-12">
-            <button class="btn btn-success" >Buy Now</button>
+            <button class="btn btn-success">Buy Now</button>
             <button class="btn btn-success" (click)="handleAddToCart(product)">Add to Cart</button>
         </div>
     </div>
-</div>    
-<div class="row">
-    <app-cart></app-cart>
 </div>
